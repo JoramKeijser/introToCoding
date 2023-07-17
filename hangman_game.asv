@@ -1,0 +1,82 @@
+
+%% Intro to coding - hangman game
+
+% This is the script file for the game of hangman
+clc
+clear
+% Welcome the player
+disp('Welcome to the game of Hangman!')
+
+disp(['The game of Hangman is a one player game that requires ', ...
+        'you to guess lowercase letters (a-z) to try to guess a word. You ', ...
+        'have 8 lives. You lose a life for each wrong letter. ', ...
+        'Good luck!'])
+pause(15) %allow time for them to read the instructions for 12 seconds
+
+
+playAgain = 1; %assign initial value so game can start
+
+while playAgain == 1
+    %Create a word bank
+
+    wordBank = {'lab', 'neuroscience', 'brain', 'computer', 'programming'};
+
+    randomNumber = randi(size(wordBank), 1); %Choose a random index from the bank
+    currentWord = wordBank{randomNumber}; %Index the bank and store the word in
+
+    currentNumberLetters = length(currentWord); %determine the length of the word
+    currentNumberLives = 8; %assign 8 lives to numLives
+
+    %Split letters in word into an array of dashes
+    wordSpaces = char(currentNumberLetters); % initialize character array
+    wordSpaces(1:currentNumberLetters) = '-';     %Fill spaces where a letter goes with a dash
+    
+
+    %Print the dashes that the letters will go in
+    disp(wordSpaces)
+
+    %assign a initial index to the value b for guessedletters
+    guessedLetters = '';
+
+    while currentNumberLives > 0
+        disp(['You have ' num2str(currentNumberLives) ' lives left.']) %print the number of lives
+        guess = input('Please guess a lowercase letter: ', 's'); %request letter
+        for i = 1:NumLetters
+            if guess == currentWord(i) %determines if the guess matches any letters in the word
+                wordSpaces(i) = guess; %sets the guess into the spaces if there is a match
+                correctGuess = 0; %adds one to the determinator so the next statement is false
+                fprintf('You guessed correctly!')
+            else
+                correctGuess = 1;
+            end
+        end
+        if correctGuess == 1 %if they guessed a wrong letter determinator stays at 0
+            currentNumberLives = currentNumberLives - 1; %remove a life if the letter was wrong
+        end
+
+        guessedLetters = [guessedLetters, guess]; %assign the guessed letters at index n
+        fprintf('Your guessed letters are: %s\n', guessedLetters) %print the guessed letters
+        disp(wordSpaces) %display the word/letters and word spaces
+       
+        %Check to see if the input array is the same as the actual word
+        if wordSpaces == currentNumberLetters
+            clear('guessedLetters', 'wordSpaces')
+            disp(currentWord) %show the word
+            fprintf('You guessed the word!\n') %print that they solved the puzzle
+            playAgain = input(['Would you like to play again?(1 = Yes or ' ...
+                '0 = No):']); %ask if they want to play again and store the answer
+            break %break out of inner while loop
+        end
+        if currentNumberLives == 0 %determine if the number of lives is zero
+            clear('guessedLetters', 'wordSpaces')
+            disp(['You ran out of lives ! The word was: ' currentWord]) %tell the player they ran out of lives
+             playAgain = input(['Would you like to play again?(1 = Yes or ' ...
+                '0 = No):']); %ask if they want to play again and store the answer
+            break %break out of inner while loop
+        end
+    end
+end
+
+
+% some other nice resources:
+% https://github.com/JoanAguilar/MatlabGames
