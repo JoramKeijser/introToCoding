@@ -17,3 +17,4 @@ As a bonus:
 - you can also introduce github as a tool to keep your work (versioning) and find other work
 - see if using chatGPT can be a useful tool to get started!
 - talk about different programming languages
+
