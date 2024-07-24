@@ -1,44 +1,53 @@
-# Coding basics 
+# Intro: Coding basics 
 
 ## Variables (& redefining)
 Variables are containers for storing data values. In MATLAB, you can create and redefine variables easily:
 
-in2science
+```
+in2science//
 in2science = 1;                  % Assign a number
 in2science = 'awesome';          % Reassign with a string (word)
+```
 
 ## Indexing & more variables 
 MATLAB uses parentheses () for indexing. Indexing starts at 1, not 0.
 
+```
 in2science(2)                    % Get the 2nd character of the string
 in2science = {'abc', 'bcd', 'cde'}; % Create a cell array of strings: suing students names is good here 
 in2science(2)                    % Get the 2nd cell (returns {'bcd'})
 in2science{2}(1)                 % Get the 1st character of the 2nd cell (returns 'b')
+```
 
 ## Functions
 MATLAB has many built-in functions. Here are two common ones:
 
+```
 length(in2science)               % Returns the length of an array or string
 input('Enter something: ');      % Prompts user for input
+```
 
 ## If/for/while loops
 Control structures help you control the flow of your program:
 
+```
 for i = 1:6                      % Loop from 1 to 6
     disp(in2science{i})          % Display each element (will error if less than 6 elements)
 end
+```
 
 ## Finding functions
+```
 When you need help or can't remember a function (or anything else):
  - Use MATLAB's help(): e.g., help length
  - Google your question: "MATLAB how to..."
  - Ask an AI assistant (ChatGPT, Claude) for explanations or examples
-
+```
 # Coding hangman
 
 ## Writing pseudocode / algorithm:
-Pseudocode is a plain language description of your program's steps. Here's an example for Hangman:
-
+Pseudocode is a plain language description of your program's steps. Here's an example for Hangman (write this interactively on the board):
+```
 (to add later: Print welcome message and instructions)
 
 Set word to guess
@@ -72,21 +81,22 @@ While lives > 0:
         Break loop
 
 End game
-
+```
 ## Now translate into code (live) 
-(This section would be filled during a live coding session)
+(This section would be filled during a live coding session - the output from the 2023 coding session in in `hangman_game.m`)
 
 ## What is missing? 
 
 ### Printing information: number of lives left, current guesses, ...
 Use the disp() function to show game state:
+
     disp(['Lives left: ' num2str(lives)])
     disp(['Current word: ' current_word_state])
     disp(['Guessed letters: ' guessed_letters])
 
 ### Drawing hangman
 You can represent the hangman visually using ASCII art. Here's an example:
-
+```
 HANGMANPICS = {
     ['      ' newline ...
      '      ' newline ...
@@ -168,18 +178,22 @@ HANGMANPICS = {
      '     |' newline ...
      '=========']
 };
-
+```
 To use this in your game, you would display the appropriate picture based on the number of lives left:
+```
 disp(HANGMANPICS{11 - lives})  % Assuming you start with 10 lives
-
-# In practice
+```
+## Play a few rounds 
+# Outro
 ## How to get started coding
-    - tutorials
-    - AdventOfCode game
-    - Git and Github (show this repo!)
-    - StackOverflow / reddit / ...
-    - LLM! As we just saw, you can iterate with an LLM to help you get started / iron out some bugs and explain them to you. Use it like your own personal teacher. 
+- tutorials
+- AdventOfCode game
+- Git and Github (show this repo!)
+- StackOverflow / reddit / ...
+- LLM! As we just saw, you can iterate with an LLM to help you get started / iron out some bugs and explain them to you. Use it like your own personal teacher. 
+
 ## How we use coding in neuroscience
+
 If there's time, bring up GUI of neurons PSTHS aligned to stimulus onset. For one neuron, how can we test whether it responds to one stimulus (.e.g gratings - talk about Hubel and Weisel Nobel Prize - we can do the same analysis here!) 
 
 ## End
