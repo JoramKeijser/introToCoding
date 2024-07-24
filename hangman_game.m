@@ -35,13 +35,12 @@ guessedLetters = '';
 while currentNumberLives > 0 % execute this loop while the player still has lives
     disp(['You have ', num2str(currentNumberLives), ' lives left.']) % number of lives
     guess = input('Please guess a lowercase letter: ', 's'); % request letter
+    correctGuess = 0;
     for iGuess = 1:currentNumberLetters
         if guess == currentWord(iGuess) % does the guess matches any letters in the word
             wordSpaces(iGuess) = guess; % sets the guess into the spaces if there is a match
             correctGuess = 1;
             fprintf('You guessed correctly!')
-        else
-            correctGuess = 0;
         end
     end
     if correctGuess == 0 %if they guessed a wrong letter, lose a life

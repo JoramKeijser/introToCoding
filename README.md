@@ -1,8 +1,8 @@
 ### Intro to coding - Hangman game
 
-Use the hangman_game.m script as a template to live code with the in2science students.
+Use the hangman_game.m script as a template to live code with the in2science students!
 
-With the script you can cover:
+With this example you can cover:
 - coding window / command window / workspace
 - variables
 - types of variables (cell, characters, numbers)
@@ -13,8 +13,5 @@ With the script you can cover:
 
 Generating the word bank is an easy and interactive part of the tutorial - be sure to ask for neuroscience / lab related words!
 
-As a bonus:
-- you can also introduce github as a tool to keep your work (versioning) and find other work
-- see if using chatGPT can be a useful tool to get started!
-- talk about different programming languages
+See codingIntro.md for a template structure. 
 
