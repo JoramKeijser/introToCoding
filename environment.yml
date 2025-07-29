@@ -121,7 +121,7 @@ dependencies:
   - pure_eval=0.2.3=pyhd8ed1ab_1
   - pygame=2.6.1=py313h5fadf01_0
   - pygments=2.19.2=pyhd8ed1ab_0
-  - python=3.13.5=hec9711d_102_cp313
+  - python=3.11
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python_abi=3.13=8_cp313
   - pyzmq=27.0.0=py313h8e95178_0
