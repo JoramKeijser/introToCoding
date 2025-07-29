@@ -123,7 +123,6 @@ dependencies:
   - pygments=2.19.2=pyhd8ed1ab_0
   - python=3.11
   - python-dateutil=2.9.0.post0=pyhe01879c_2
-  - python_abi=3.13=8_cp313
   - pyzmq=27.0.0=py313h8e95178_0
   - rav1e=0.7.1=h8fae777_3
   - readline=8.2=h8c095d6_2
