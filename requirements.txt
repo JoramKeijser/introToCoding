@@ -1,5 +1,0 @@
-sys
-random
-pygame
-numpy
-matplotlib
