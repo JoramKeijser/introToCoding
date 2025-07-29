@@ -135,7 +135,6 @@ dependencies:
   - stack_data=0.6.3=pyhd8ed1ab_1
   - svt-av1=3.0.2=h5888daf_0
   - tk=8.6.13=noxft_hd72426e_102
-  - tornado=6.5.1=py313h536fd9c_0
   - traitlets=5.14.3=pyhd8ed1ab_1
   - typing_extensions=4.14.1=pyhe01879c_0
   - tzdata=2025b=h78e105d_0
