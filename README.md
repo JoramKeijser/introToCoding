@@ -31,3 +31,5 @@ For options (available initialisations):
 ```
 python game_of_life.py help
 ```
+
+Alternatively, run the notebook [online using Binder](https://tinyurl.com/5bc5mrx5). This only works for the notebook, not the game of life script, since it can't launch the popup window. 
