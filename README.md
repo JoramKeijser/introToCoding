@@ -16,7 +16,7 @@ With this example you can cover:
 
 Generating the word bank is an easy and interactive part of the tutorial - be sure to ask for neuroscience / lab related words!
 
-## Python: Game of Live
+## Python: Game of Life
 
 Use `codingIntro_python.ipybn` for live coding, and `game_of_life.py` as a cool application. The latter uses [pygame](https://www.pygame.org/), which can be installed using the provided conda environment:
 ```
