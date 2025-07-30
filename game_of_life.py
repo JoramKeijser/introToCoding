@@ -11,9 +11,9 @@ WIDTH, HEIGHT = 600, 600
 ROWS, COLS = 30, 30
 CELL_SIZE = WIDTH // COLS
 
-ALIVE_COLOR = (0, 0, 0)
-DEAD_COLOR = (255, 255, 255)
-GREY = (200, 200, 200)  # Grid lines
+ALIVE_COLOR = "white"
+DEAD_COLOR = "black"
+GREY = "grey"  # Grid lines
 
 # === Initialize pygame ===
 pygame.init()
